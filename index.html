@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAHMA PATIENT MEDICINE STORE</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            background: #e0dddd;
+            font-family: sans-serif;
+        }
+        .header{
+            background: #fff;
+            padding: 44px;
+        }
+        .logo{
+            margin-left: 100px;
+        }
+        .logo-badge{
+            background: linear-gradient(134deg, #2b631e, #39279e);
+            border-radius: 50%;
+            color: #fff;
+            padding: 17px;
+            font-weight: bold;
+        }
+        .logo-name{
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav{
+            display: flex;
+            gap: 17px;
+        }
+        nav a{
+            text-align: center;
+            background: #39279e;
+            text-decoration: none;
+            border-radius: 14px;
+            color: white;
+            align-items: center;
+            padding: 10px 18px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+        .navs{
+            margin-left: 1000px;
+        }
+        .Wellness{
+            font-family: serif;
+            font-size: 37px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: rgb(32, 32, 248);
+        }
+        .affordable{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            margin-left: 40px;
+            font-weight: bold;
+            color: #39279e;
+        }
+        .home-card{
+            display: grid;
+            background: white;
+            border-radius: 12px;
+            width: 600px;
+            height: 420px;
+            margin-top: 80px;
+            margin-left: 170px;
+            box-shadow: 0 8px 24px #1d1c1c;
+        }
+        .a{
+            display: inline-flex;align-items:center;gap:10px;background:#b4b5b6;
+            color:#292cc0;border-radius:999px;
+            padding-bottom: 7px;
+            padding-right: 4px;
+            padding-left: 10px;
+            padding-top: 7px;
+            font-size:13px;
+            margin: 18px 50px;
+            text-align: center;
+            font-weight:600; width: 200px; height: 20px;
+        }
+        .a1{
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: -65px;
+            margin-left: 320px;
+            padding-bottom: 7px;
+            padding-right: 4px;
+            padding-left: 10px;
+            padding-top: 7px;
+            font-size: 13px;
+            background: #b4b5b6;
+            color: #292cc0;
+            border-radius: 999px;
+            width: 200px;
+            font-weight: 600;
+            height: 20px;
+        }
+        .aa{
+            margin-top: -30px;
+            font-weight: bold;
+            font-size: 26px;
+            font-family: sans-serif;
+            color: #000;
+            text-align: center;
+            align-items: center;
+        }
+        .aa1{
+            margin-top: -10px;
+            font-size: 26px;
+            font-family: sans-serif;
+            color: #000;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .aa2{
+            margin-top: -45px;
+            font-size: 26px;
+            font-family: sans-serif;
+            color: #000;
+            font-weight: bold;
+            margin-left: 270px;
+        }
+        .b{
+            font-family: sans-serif;
+            margin-left: 30px;
+            color: rgb(66, 61, 61);
+            margin-top: 1px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .c{
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: 2px;
+            background: #b4b5b6;
+            color: #292cc0;
+            width: 140px;
+            height: 20px;
+            padding-left: 7px;
+            padding-bottom: 7px;
+            padding-right: 20px;
+            border-radius: 999px;
+            padding-top: 7px;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        .cc{
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: -50px;
+            background: #b4b5b6;
+            color: #292cc0;
+            width: 140px;
+            height: 20px;
+            padding-left: 7px;
+            padding-bottom: 7px;
+            padding-right: 20px;
+            border-radius: 999px;
+            padding-top: 7px;
+            font-weight: 600;
+            margin-left: 220px;
+        }
+        .ccc{
+            font-family: sans-serif;
+            font-size: 13px;
+            margin-top: -67px;
+            background: #b4b5b6;
+            color: #292cc0;
+            width: 140px;
+            height: 20px;
+            padding-left: 7px;
+            padding-bottom: 7px;
+            padding-right: 20px;
+            border-radius: 999px;
+            padding-top: 7px;
+            font-weight: 600;
+            margin-left: 410px;
+        }
+       .searchinp{
+        margin-left: 17px;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1.7px solid #000;
+        width: 240px;
+       }
+       .cat{
+        padding: 10px;
+        border-radius: 10px;
+        width: 180px;
+       }
+       .searchBtn{
+        border: none;
+        background: #292cc0;
+        color: #fff;
+        border-radius: 12px;
+        padding: 10px;
+        width: 70px;
+        cursor: pointer;
+        font-weight: 900;
+       }
+       .states{
+        background: white;
+        border-radius: 12px;
+        width: 600px;
+        height: 420px;
+        display: grid;
+        margin-left: 800px;
+        margin-top: -420px;
+        box-shadow: 0 8px 24px #000;
+        border-radius: 10px;
+       }
+       table{
+        width: 600px;
+        border-radius: 10px;
+        height: 420px;
+        border-collapse: collapse;
+       }
+       .d{
+        margin-top: -47px;
+        margin-left: 110px;
+        font-weight: 700;
+        font-size:37px;
+        color: #39279e;
+        font-family: serif;
+       }
+       td{
+        border: 1.4px solid #292cc0;
+        border-radius: 10px;
+       }
+       th{
+        border: 1.4px solid #faf7f7;
+        padding: 4px;
+        color: #ccc;
+        background: #39279e;
+        border-radius: 12px;
+        text-align: center;
+       }
+       .section1{
+        background: white;
+        max-width: 1200px;
+        height: 8400px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 8px 20px #000;
+       }
+       .products{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+       }
+       .product{
+        padding: 20px;
+        width: 200px;
+        border-radius: 10px;
+        background: #e5e6e7;
+        transition: 0.3s;
+        text-align: center;
+        box-shadow: 0 3px 7px #000;
+       }
+       .product:hover{
+        transform: translateY(-7px);
+       }
+       .product img{
+        width: 100%;
+        height: 170px;
+        border-radius: 8px;
+        object-fit: cover;
+       }
+       .product h3{
+        margin: 10px 0;
+       }
+       .price{
+        color: rgb(20, 199, 20);        
+        font-weight: 400;
+        font-size: 16px;
+       }
+       .buy-btn{
+        border: none;
+        border-radius: 10px;
+        background: #2a12b4;
+        color: #ccc;
+        cursor: pointer;
+        width: 100%;
+        padding: 14px;
+        font-weight: 700;
+       }
+       .cart{
+        background: #fff;
+        width: 60%;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 30px auto;
+        box-shadow: 0 4px 12px #000;
+       }
+       .cart h3{
+        color: #292cc0;
+        font-family: sans-serif;
+        text-align: center;
+       }
+       .cart-items{
+        margin-top: 17px;
+       }
+       .cart-item{
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid #ccc;
+        padding: 10px 0;
+       }
+       .Total{
+        color: #2b631e;
+        margin-top: 10px;
+        text-align: right;
+        font-weight: 800;
+       }
+       form{
+        background: #fff;
+        width: 490px;
+        box-shadow: 0 4px 8px #1d1c1c;
+        border-radius: 12px;
+        align-items: center;
+        height: 670px;
+        margin-left: 800px;
+       }
+       form h2{
+        color: #292cc0;
+        margin-left: 20px;
+       }
+        textarea, input{
+        margin: 10px 0;
+        width: 80%;
+        border: 1px solid #000;
+        margin-left: 18px;
+        padding: 9px;
+        border-radius: 10px;
+       }
+       label{
+        display: block;
+        text-align: left;
+        margin-left: 30px;
+       }
+       #state{
+        margin-left: 18px;
+        width: 80%;
+        text-align: right;
+        background: #292cc0;
+        color: #fff;
+        
+        border-radius: 7px;
+        padding: 10px;
+       }
+       .warning{
+        text-align: center;
+        align-items: center;
+        font-size: 17px;
+        font-family: serif;
+        font-weight: 700;
+        background: #fef9ce;
+         border:1px solid #fde68a;
+         width: 80%;
+         margin-left: 20px;
+         border-radius: 4px;
+         margin-top: 12px;
+         border: 8px;
+       }
+       #submit{
+        width: 22%;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 13px;
+        border: none;
+        cursor: pointer;
+        background: #292cc0;
+        color: #fff;
+        margin-left: 40px;
+        font-weight: 800;
+       }
+       #submit:hover{
+        transform: scale(1.2);
+        background: #2b631e;
+       }
+       #payment{
+        background: #fff;
+        width: 490px;
+        box-shadow: 0 4px 8px #000;
+        border-radius: 12px;
+        align-items: center;
+        height: 670px;
+        margin-left: 290px;
+        margin-top: -690px;
+       }
+       .payment-method{
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+         color: #181717;
+         background: #faf9f862;
+         width: 90%;
+        border: 1px solid #3b3a37;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+       }
+       .account-info{
+        margin-left: 14px;
+        font-weight: bold;
+        font-size: 20px;
+        width: 80%;
+        text-align: center;
+        align-items: center;
+        background: #faf9f862;
+        border:1px solid #3b3a37;
+        margin-top: 24px;
+         color: #181717;
+        border-radius: 10px;
+       }
+       .direct{
+        margin-top: 24px;
+        text-align: center;
+        align-items: center;
+        background: #faf9f862;
+        border: 1px solid #3b3a37;
+        font-size: 18px;
+        width: 80%;
+        font-family: sans-serif;
+        font-weight: 800;
+        border-radius: 10px;
+         color: #181717;
+       }
+       .payment-warning{
+        background: #faf9f862;
+        border: 1px solid #3b3a37;
+        margin-top: 24px;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        width: 90%;
+        margin-left: 14px;
+        color: #181717;
+        border-radius: 10px;
+       }
+       #errorName,#errorEmail,#errorPhone,#errorAddress,#errorFile,#errorState,#errorReaciept{color: red;}
+    .prescription{
+        background: #fff;
+        text-align: center;
+        align-items: center;
+        margin-left: 400px;
+        width: 50%;
+        height: 390px;
+        border-radius: 10px;
+    }
+    .prescriber{
+        text-align: center;
+        align-items: center;
+        background: #fef9ce;
+        border-radius: 10px;
+    }
+    .prescription button{
+        background: #292cc0;
+        color: #fff;
+        border: none;
+        text-align: center;
+        align-items: center;
+        padding: 17px;
+        font-weight: 700;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .prescription input{
+        border: 2px solid #000;
+        border-radius: 8px;
+        margin-right: 94px;
+    }
+    .prescription label{
+        color: #1d1c1c;
+    }
+    /* About section */
+    #about{
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px #181717;
+        width: 70%;
+        margin-left: 270px;
+        height: 400px;
+    }
+    .about-note{
+        text-align: center;
+        color: #1d1c1c;
+        font-family: sans-serif;
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 100;
+        font-family: sans-serif;
+    }
+    .about-note1{
+        text-align: left;
+        font-size: 17px;
+        margin-top: 100px;
+        margin-left: 20px;
+        font-weight: 700;
+    }
+    .about-note2{
+        text-align: right;
+        margin-top: -120px;
+        margin-right: 20px;
+        font-size: 17px;
+        font-weight: 700;
+    }
+    #contact{
+        background: #fff;
+        width: 40%;
+        height: 400px;
+        border-radius: 12px;
+        box-shadow:0 4px 12px #181717;
+        margin-left: 240px;
+    }
+    #cSubmit{
+        border: none;
+        border-radius: 14px;
+        padding: 14.99px;
+        text-align: center;
+        align-items: center;
+        font-size: 18px;
+        margin-left: 30%;
+        background: #292cc0;
+        color: #fff;
+        cursor: pointer;
+    }
+    #cSubmit:hover{
+        background: #1f2057;
+    }
+    #contactFoam{
+         background: #fff;
+        width: 100%;
+        height: 340px;
+        border-radius: 12px;
+        box-shadow:0 4px 12px #181717;
+        margin-left: 1px;
+    }
+    footer{
+        color: #ccc;
+        background: #39279e;
+        padding: 30px;
+    }
+    .brand{
+        margin-left: 80px;
+    }
+    .Fw{
+        margin-left: 80px;
+    }
+    .tel{
+        margin-left: 1000px;
+    }
+    .address{
+        margin-left: 1000px;
+          margin-top: -34px;
+    }
+    .copy{
+        text-align: center;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="header">
+        <div class="logo">
+            <span class="logo-badge">Rx</span> <span class="logo-name">Rahma Patient Medicine Store</span>
+        </div>
+        <div class="navs">
+        <nav>
+            <a href="#home" class="link">Home</a>
+            <a href="#shop" class="link">Shop</a>
+            <a href="cart.html" class="link">Cart</a>
+            <a href="#about" class="link">About</a>
+            <a href="#contact" class="link">Contact</a>
+        </nav></div>
+    </div>
+</header>
+    <section class="home">
+        <div class="Wellness">Wellcome to Rahma Patients Madicine Store</div>
+        <div class="affordable">The home of quality and affordable drugs in Nigeria</div>
+        <div class="home-card">
+            <div class="a"> Nationwide delivery 🏞</div>
+            <div class="a1">Head Office: Mallam Sidi 🏢</div>
+           <div class="aa">Quality Medicines.</div>
+           <div class="aa1">Licensed Pharmacy.</div>
+           <div class="aa2">Delivery Across Nigeria.</div>
+            <span class="b">Upload your doctor’s prescription. <br>So that pharmacist should look at and send your drugs before 72 Hours.
+            <br>NOTE: Delivery will be across Nigeria only</span>
+            <div class="c">Pharmacist support.</div>
+            <div class="cc">NAFDAC Licensed.</div>
+            <div class="ccc">Pay on delivery</div>
+            <div class="search">
+                <input type="search" class="searchinp" id="search" placeholder="Search drug (eg. paracetamol)">
+                <select id="cat" class="cat">
+                    <option value="iv">IV/IM</option>
+                    <option value="tabs">Tablets</option>
+                    <option value="caps">Capsules</option>
+                    <option value="ivf">IVF</option>
+                    <option value="syrup">Syrup</option>
+                    <option value="drop">drop</option>
+                    <option value="cream">Cream</option>
+                </select>
+                <button id="searchBtn" class="searchBtn">Search</button>
+            </div>
+        </div>
+        <div class="states">
+            <div class="d">States delivery prices</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>States</th>
+                        <th>Delivery Fee</th>
+                        <th>States</th>
+                        <th>Delivery Fee</th>
+                        <th>States</th>
+                        <th>Delivery Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abia</td>
+                        <td>₦5000</td>
+                        <td>Adamawa</td>
+                        <td>₦3000</td>
+                        <td>Akwa Ibom</td>
+                        <td>₦6000</td>
+                    </tr>
+                    <tr>
+                        <td>Anambara </td>
+                        <td>₦5000</td>
+                        <td>Bauchi</td>
+                        <td>₦2000</td>
+                        <td>Bayelsa</td>
+                        <td>₦5000</td>
+                    </tr>
+                    <tr>
+                        <td>Benue</td>
+                        <td>₦4500</td>
+                        <td>Borno</td>
+                        <td>₦2500</td>
+                        <td>Cross River</td>
+                        <td>₦6000</td>
+                    </tr>
+                    <tr>
+                        <td>Delta</td>
+                        <td>₦5500</td>
+                        <td>Ibonyi</td>
+                        <td>₦6000</td>
+                        <td>Edo</td>
+                        <td>₦6000</td>
+                    </tr>
+                    <tr>
+                        <td>Ekiti</td>
+                        <td>₦6000</td>
+                        <td>Enugu</td>
+                        <td>₦5500</td>
+                        <td>Gombe (Other LGA)</td>
+                        <td>₦2000</td>
+                    </tr>
+                    <tr>
+                        <td>Imo</td>
+                        <td>₦5000</td>
+                        <td>Jigawa</td>
+                        <td>₦4000</td>
+                        <td>Kaduna</td>
+                        <td>₦3500</td>
+                    </tr>
+                    <tr>
+                        <td>Kano</td>
+                        <td>₦3000</td>
+                        <td>Katsina</td>
+                        <td>₦3500</td>
+                        <td>Kebbi</td>
+                        <td>₦4500</td>
+                    </tr>
+                    <tr>
+                        <td>Kogi</td>
+                        <td>₦4500</td>
+                        <td>Kwara</td>
+                        <td>₦5000</td>
+                        <td>Lagos</td>
+                        <td>₦6500</td>
+                    </tr>
+                    <tr>
+                        <td>Nassarawa</td>
+                        <td>₦5000</td>
+                        <td>Niger</td>
+                        <td>₦4500</td>
+                        <td>Ogun</td>
+                        <td>₦6500</td>
+                    </tr>
+                    <tr>
+                        <td>Osun</td>
+                        <td>₦6500</td>
+                        <td>Oyo</td>
+                        <td>₦6500</td>
+                        <td>Plateau</td>
+                        <td>₦4000</td>
+                    </tr>
+                    <tr>
+                        <td>Rivers</td>
+                        <td>₦6500</td>
+                        <td>Sokoto</td>
+                        <td>₦5000</td>
+                        <td>Taraba</td>
+                        <td>₦3500</td>
+                    </tr>
+                    <tr>
+                        <td>Yobe</td>
+                        <td>₦3500</td>
+                        <td>Zamfara</td>
+                        <td>₦5000</td>
+                        <td>FCT</td>
+                        <td>₦4500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="shop" class="section1">
+        <h2 style="color: #292cc0;font-family: sans-serif;">Shop Medicines</h2>
+        <div class="products" id="productList">
+            <div class="product" data-name="artesunate" data-category="iv">
+                <img src="C:\Users\User\Documents/pharmacy1.jpg">
+                <h3>IV Artesunate 120mg</h3>
+                <div class="price">Roll : ₦15000</div>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="product" data-name="artemeter" data-category="im">
+                <img src="C:\Users\User\Documents/phamacy 6.jpg" >
+                <h3>IV Artesunate 60mg</h3>
+                <div class="price">Roll : ₦9000</div>
+                <button class="buy-btn">Add to cart</button>
+            </div>
+            <div class="product" data-name="artemeter" data-category="im">
+                <img src="C:\Users\User\Documents/artemether injection.jpg" >
+                <h3>IM Artemether 80mg</h3>
+                <div class="price">Roll : ₦5500</div>
+                <button class="buy-btn">Add to cart</button>
+            </div>
+            <div class="product" data-name="artemeter lumefantrine" data-category="im">
+                <img src="C:\Users\User\Documents/pharmacy 9.jpg">
+                <h3>IM Artemether and Lumefantrine 80mg</h3>
+                <div class="price">Roll : ₦41000</div>
+                <button class="buy-btn">Add to cart</button>
+            </div>
+            <div class="product" data-name="powder(syrup) ACT" data-category="powder(susp)">
+                <img src="C:\Users\User\Documents/pharmacy2.jpg">
+                <h3>Powder(susp) Artemether & lumefantrine 70ml</h3>
+                <div class="price">Roll : ₦11500</div>
+                <button class="buy-btn">Add to cart</button>
+            </div>
+            <div class="product" data-name="ACT" data-category="Terer4eablets">
+                <img src="C:\Users\User\Documents/pharmacy 3.jpg">
+                <h3>Tabs Artemether & Lumefantrine</h3>
+                <div class="price">Roll : ₦</div>
+                <button class="buy-btn">Add to cart</button>
+            </div>
+            <div class="product" data-name="tabs augmentin" data-category="Tablets">
+                <img src="C:\Users\User\Documents/pharmacy 7.jpg">
+                <h3>Tabs Amoxicillin & Potassium Clavollanoate 625mg</h3>
+                <div class="price">Roll : ₦22000</div>
+                <button class="buy-btn">Add cart</button>
+            </div>
+            <div class="product" data-name="tabs augmentin 375" data-category="Tablets">
+                <img src="C:\Users\User\Documents/pharmacy 4.jpg">##
+                <h3>Tabs Amoxicillin & Potassium Clavulanate 375mg</h3>
+                <div class="price">Roll : ₦10000</div>
+                <button class="buy-btn">Add yo cart</button>
+            </div>
+        <div class="product" data-name="caps Amoxicillin" data-category="Capsules" >
+            <img src="C:\Users\User\Documents/amoxil 500mg.jpg">
+            <h3>Caps Amoxicillin 500mg</h3>
+            <div class="price">Carton : ₦4500</div>
+            <button class="buy-btn">Add to cart</button>
+        </div>
+        <div class="product" data-name="Amoxicillin caps 250mg" data-category="Capsules">
+            <img src="C:\Users\User\Documents/amoxil 250mg.jpg">
+            <h3>Caps Amoxicillin 250mg</h3>
+            <div class="price">Box : ₦4000</div>
+            <button class="buy-btn">Add to cart</button>
+        </div>
+        <div class="product" data-name="powder(susp) augmentin"  data-category="powder(susp)">
+            <img src="C:\Users\User\Documents/pharmacy 8.jpg">
+            <h3>Susp(powder) Amoxicillin & Clavulanate Potassium 70ml</h3>
+            <div class="price">Roll : ₦18000</div>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+        <div class="product" data-name="powder(Susp) Amoxicillin" data-category="powder(susp)">
+            <img src="C:\Users\User\Documents/amoxil syrup.jpg">
+            <h3>Susp(powder) Amoxicillin 60ml</h3>
+            <div class="price">Roll : ₦6000</div>
+            <button class="buy-btn">Add to cart</button>
+        </div>
+        <div class="product" data-name="Amoxicillin drop" data-category="Drop">
+            <img src="C:\Users\User\Documents/ampicillin drop.jpg">
+            <h3>Ampicillin Drop 15ml</h3>
+            <div class="price">Roll : ₦6000</div>
+            <button class="buy-btn">Add  to cart</button>
+        </div>
+        <div class="product" data-name="iv augmentin" data-category="iv">
+            <img src="C:\Users\User\Documents/iv augmec.jpg">
+            <h3>IV Amoxicillin & Clavulanic Acid 1.2g</h3>
+            <div class="price">Roll : ₦22000</div>
+            <button class="buy-btn">Add to cart</button>
+        </div>
+    <div class="product" data-name="iv Amoxicillin" data-category="iv">
+        <img src="C:\Users\User\Documents/iv amoxil.jpg">
+        <h3>IV Amoxicillin 500mg</h3>
+        <div class="price">Roll : ₦5000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs Azithromycin" data-category="Tablets">
+        <img src="C:\Users\User\Documents/azithromycin tabs.jpg" alt="">
+        <h3>Tabs Azithromycin 500mg</h3>
+        <div class="price">Roll : 22500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="susp Azithromycin" data-category="powder(susp)">
+        <img src="C:\Users\User\Documents/azithromycin susp.jpg" alt="">
+        <h3>Powder(susp) Azithromycin 60ml</h3>
+        <div class="price">Roll : ₦15500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="susp Albendazole" data-category="syrup">
+        <img src="C:\Users\User\Documents/zolat.jpg">
+        <h3>Susp Albendazole</h3>
+        <div class="price">Roll : ₦6500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="amlodipine" data-category="tablets">
+        <img src="C:\Users\User\Documents/amlodipine 10mg.jpg">
+        <h3>Tabs Amlodipine 10mg</h3>
+        <div class="price">Box : ₦16700</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+     <div class="product" data-name="amlodipine" data-category="tablets">
+        <img src="C:\Users\User\Documents/amlodipine 5.jpg">
+        <h3>Tabs Amlodipine 5mg</h3>
+        <div class="price">Box : ₦16700</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="syrup blood tonic" data-category="syrup">
+        <img src="C:\Users\User\Documents/bunto.jpg">
+        <h3>Syrup Blood Tonic (Bunto) 100ml</h3>
+        <div class="price">Roll : ₦7000</div>
+        <button class="buy-btn">Add  to cart</button>
+    </div>
+    <div class="product" data-name="cough syrup (Baby cough)" data-category="syrup">
+        <img src="C:\Users\User\Documents/baby cough.jpg">
+        <h3>Cough Syrup (Baby Cough) 100ml</h3>
+        <div class="price">Roll : ₦4500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="cough syrup (Lablin)" data-category="syrup">
+        <img src="C:\Users\User\Documents/lablin.jpg" alt="">
+        <h3>Cough Syrup (Lablin) 100ml</h3>
+        <div class="price">Roll : ₦5500</div>
+        <button class="buy-btn">Add cart</button>
+    </div>
+    <div class="product" data-name="cattafed drop" data-category="drop">
+        <img src="C:\Users\User\Documents/cattafed.jpg">
+        <h3>Cattafed Oral Drop</h3>
+        <div class="price">Roll : ₦6000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs ciproflaxacine" data-category="Tablets">
+        <img src="C:\Users\User\Documents/cipro tabs.jpg">
+        <h3>Tabs Ciproflaxacine 500mg</h3>
+        <div class="price">Roll : ₦6500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="iv cipro" data-category="ivf">
+        <img src="C:\Users\User\Documents/ivf cipro.jpg">
+        <h3>IV Ciproflaxacine 500mg</h3>
+        <div class="price">Carton : ₦5000</div>
+        <button class="buy-btn">Add top cart</button>
+    </div>
+    <div class="product" data-name="ceftriaxone" data-category="iv">
+        <img src="C:\Users\User\Documents/pharmacy 5.jpg">
+        <h3>IV Ceftriaxone 1g</h3>
+        <div class="price">Roll : ₦7000</div>
+        <button class="buy-btn">Add cart</button>
+    </div>
+    <div class="product" data-name="iv cyceph" data-category="iv">
+        <img src="C:\Users\User\Documents/cyceph.jpg">
+        <h3>IV Cyceph 1.5mg</h3>
+        <div class="price">Roll : ₦18000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="iv cimetidine" data-category="iv">
+        <img src="C:\Users\User\Documents/cimetidine inj.jpg">
+        <h3>IV Cimetidine </h3>
+        <div class="price">Roll : ₦17000</div>
+        <button class="buy-btn">Add to chart</button>
+    </div>
+    <div class="product" data-name="tabs Cefuroxime" data-category="Tablets">
+        <img src="C:\Users\User\Documents/cefuroxime.jpg">
+        <h3>Tabs Cefuroxime 500mg</h3>
+        <div class="price">Roll : ₦24500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="syrup Cefuroxime" data-category="syrup">
+        <img src="C:\Users\User\Documents/cefuroxime syrup.jpg">
+        <h3>Syrup Cefuroxime </h3>
+        <div class="price">Roll : ₦24000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs Cefixime" data-category="Tablets">
+        <img src="C:\Users\User\Documents/cefixime.jpg">
+        <h3>Tabs Cefixime 500mg</h3>
+        <div class="price">Roll ₦28500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs chemotrypsin" data-category="Tablets">
+        <img src="C:\Users\User\Documents/chemo.jpg">
+        <h3>Tabs Chemotrypsin </h3>
+        <div class="price">Roll : ₦89</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+        <div class="product" data-name="chromic" data-category="chromic">
+            <img src="C:\Users\User\Documents/chromic.jpg">
+            <h3>chromic</h3>
+            <div class="price">box : ₦6200</div>
+            <button class="buy-btn">Add to cart</button>
+        </div>
+    <div class="product" data-name="caps doxycyclin" data-category="Capsules">
+        <img src="C:\Users\User\Documents/doxy.jpg">
+        <h3>Caps Doxycyclin</h3>
+        <div class="price">Roll : ₦18000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs diclofenac 50mg" data-category="Tablets">
+        <img src="C:\Users\User\Documents/diclofenac 50.jpg">
+        <h3>Tabs Diclofenac Potassium 50mg</h3>
+        <div class="price">Carton : ₦900</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs diclofenac 100mg" data-category="Tablets">
+        <img src="C:\Users\User\Documents/diclofenac 100.jpg">
+        <h3>Tabs Diclofenac 100mg</h3>
+        <div class="price">Roll : ₦3800</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-category="im diclofenac" data-category="im">
+        <img src="C:\Users\User\Documents/im diclofenac.jpg">
+        <h3>IM Diclofenac 75mg</h3>
+        <div class="price">Roll : ₦12000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="destrose saline" data-category="ivf">
+        <img src="C:\Users\User\Documents/4.3.jpg">
+        <h3>IVF Destrose Saline 4.3 500mg</h3>
+        <div class="price">carton : ₦16500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="5%" data-category="ivf">
+        <img src="C:\Users\User\Documents/5%.jpg">
+        <h3>IVF Destrose Saline 5% 500mg</h3>
+        <div class="price">Carton : ₦17000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="dw" data-category="ivf">
+        <img src="C:\Users\User\Documents/DW.jpg">
+        <h3>IVF Destrose In Water </h3>
+        <div class="price">Roll : ₦17500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="distilled watter" data-category="h">
+        <img src="C:\Users\User\Documents/WFI.jpg">
+        <h3>Distilled Water for injection 10ml</h3>
+        <div class="price">Roll : ₦6000</div>
+        <button class="buy-btn">Add to cert</button>
+      </div>
+      <div class="product" data-name="athrotec" data-category="tablets">
+        <img src="C:\Users\User\Documents/athro.jpg">
+        <h3>Diclofenac Sodium & Misoprostole Tablets 75mg</h3>
+        <div class="price">Box : ₦8500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+    <div class="product" data-name="Examination gloves" data-category="gloves">
+        <img src="C:\Users\User\Documents/e gloves.jpg" alt="">
+        <h3>Examination Gloves</h3>
+        <div class="price">Carton : ₦7250</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="erythromycin" data-category="Tablets">
+        <img src="C:\Users\User\Documents/erithro.jpg">
+        <h3>Tabs Erythromycin 500mg</h3>
+        <div class="price">Roll : ₦27000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="flouconazole" data-category="Tablets">
+        <img src="C:\Users\User\Documents/fluo.jpg">
+        <h3>Tabs Fluconazole 500mg</h3>
+        <div class="price">Roll : ₦8500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="iv frusemide" data-category="iv">
+        <img src="C:\Users\User\Documents/iv laxis.jpg">
+        <h3>IV Frusemide 20mg</h3>
+        <div class="price">Roll : ₦7500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="tabs frusemide" data-category="Tablets">
+        <img src="C:\Users\User\Documents/tabs laxis.jpg">
+        <h3>Tabs Frusemide </h3>
+        <div class="price">Carton : ₦1700</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="folic acid" data-category="tabs">
+        <img src="C:\Users\User\Documents/folic acid.jpg">
+        <h3>Tabs Folic Acid</h3>
+        <div class="price">Vial : ₦9000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="persolate" data-category="tabs">
+        <img src="C:\Users\User\Documents/persolat.jpg">
+        <h3>Tabs Ferrous Sulphate</h3>
+        <div class="price">Vial : ₦6500</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="glibenclamide" data-category="tabs">
+        <img src="C:\Users\User\Documents/glibenclamide.jpg">
+        <h3>Tabs Glibenclamide </h3>
+        <div class="price">Roll : ₦7000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="gentamycin" data-category="iv">
+        <img src="C:\Users\User\Documents/genta.jpg">
+        <h3>IV Gentamycin 80mg</h3>
+        <div class="price">Roll : ₦6400</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="genta eye drop" data-category="eye drop">
+        <img src="C:\Users\User\Documents/genta eye drop.jpg">
+        <h3>Gentamycin Eye Drop</h3>
+        <div class="price">Box : ₦1389</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="Tabs hyocin" data-category="Tablets">
+        <img src="C:\Users\User\Documents/tabs hyocin.jpg">
+        <h3>Tabs Hyocin  </h3>
+        <div class="price">Carton : ₦1700</div>
+        <button class="buy-btn" >Add to cart</button>
+    </div>
+    <div class="product" data-name=" iv hyocin" data-category="iv">
+        <img src="C:\Users\User\Documents/inj hyocin.jpg">
+        <h3>IV Hyocin 10mg</h3>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="hydrocortisone" data-category="im/iv">
+        <img src="C:\Users\User\Documents/hydro.jpg">
+        <h3>IV/IM Hydrocortisone 500mg</h3>
+        <div class="price">10 vials : ₦4000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="susp ibuprofen" data-category="syrup">
+        <img src="C:\Users\User\Documents/ibuprofen.jpg">
+        <h3> Ibuprofen syrup</h3>
+        <div class="price">Roll : ₦4300</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="jawaron" data-category="Capsules">
+        <img src="C:\Users\User\Documents/jawaron.jpg">
+        <h3> jawaron Capsules</h3>
+        <div class="price">Roll : ₦600</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="keto tabs" data-category="tablets">
+        <img src="C:\Users\User\Documents/keto tabs.jpg">
+        <h3>Ketoconazole tablets</h3>
+        <div class="price">Box : ₦5000</div>
+        <button class="buy-btn">Add to cart</button>
+    </div>
+    <div class="product" data-name="keto cream" data-category="cream">
+        <img src="C:\Users\User\Documents/keto creram.jpg">
+        <h3>Ketoconazole Cream</h3>
+        <div class="price">Box : ₦5200</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="lidocain" data-category="i">
+        <img src="C:\Users\User\Documents/lidocain.jpg">
+        <h3>Lidocaine injection 50ml</h3>
+        <div class="price">Vial : ₦1700</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-category="tablets" data-name="lisnopril">
+        <img src="C:\Users\User\Documents/lisnopril.jpg">
+        <h3>Tabs Lisnopril 5mg</h3>
+        <div class="price">Box : ₦7000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-category="tablets" data-name="lisnopril">
+        <img src="C:\Users\User\Documents/lisnopril 10mg.jpg">
+        <h3>Tabs Lisnopril 10mg</h3>
+        <div class="price">Box : ₦7000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="levo" data-category="tablets">
+        <img src="C:\Users\User\Documents/">
+        <h3>Tabs Levoflaxacine 500mg</h3>
+        <div class="price">Box : ₦8500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="iv metro" data-category="ivf">
+        <img src="C:\Users\User\Documents/iv metro.jpg">
+        <h3>IV Metronidazole 50mg</h3>
+        <div class="price">Box : ₦5000</div>
+        <button  class="buy-btn">AAdd to cart</button>
+      </div>
+      <div class="product" data-name="tabs metroo" data-category="tablets">
+        <img src="C:\Users\User\Documents/tabs pcm.jpg">
+        <h3>Tabs Metronidazole 1g</h3>
+        <div class="price">Vial : ₦10500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="melloxicam" data-category="tablets">
+        <img src="C:\Users\User\Documents/meloxicam.jpg">
+        <h3>tabs Meloxicam 15mg</h3>
+        <div class="price">Paket : ₦18500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product"  data-name="misoprostol" data-category="tablets">
+        <img src="C:\Users\User\Documents/misoprostol.jpg">
+        <h3>Tabs Misoprostole 200mcg</h3>
+        <div class="price">Box : ₦9000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="Metochlopromide" data-category="iv">
+        <img src="C:\Users\User\Documents/meto.jpg">
+        <h3>IV Metochlopromide</h3>
+        <div class="price">Roll : ₦6200</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="metformin" data-category="tablets">
+        <img src="C:\Users\User\Documents/metformin.jpg">
+        <h3>Tabs Metformin</h3>
+        <div class="price">Roll : ₦87</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="MgsO4" data-category="iv/im">
+        <img src="C:\Users\User\Documents/MgSO4.jpg">
+        <h3>Magnesium Sulphate injection 500mg</h3>
+        <div class="price">paket : ₦5000</div>
+        <button  class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="mmt" data-category="syrup">
+        <img src="C:\Users\User\Documents/asad.jpg">
+        <h3>syrup Magnesium Trisilicate</h3>
+        <div class="price">Carton : ₦400</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="pad" data-category="hh">
+        <img src="C:\Users\User\Documents/pad.jpg">
+        <h3>Maternity pad</h3>
+        <div class="price">Pieces : ₦7000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="nylon" data-category="i">
+        <img src="C:\Users\User\Documents/nylon.jpg">
+        <h3>Nylon</h3>
+        <div class="price">Box : ₦5000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="nystatin" data-category="droop">
+        <img src="C:\Users\User\Documents/nystatin.jpg">
+        <h3>Nystatin Oral Drop</h3>
+        <div class="price">Box : ₦10000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="nefidifine" data-category="tablets">
+        <img src="C:\Users\User\Documents/nefidifine.jpg">
+        <h3> Tabs Nefedipine 20mg</h3>
+        <div class="price">Box : ₦1500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="n/s" data-category="ivf">
+        <img src="C:\Users\User\Documents/normal.jpg">
+        <h3>IVF Normal saline 500mg</h3>
+        <div class="price">Carton : ₦16500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="iv omeprazole" data-category="iv">
+        <img src="C:\Users\User\Documents/omeprazole caps.jpg">
+        <h3>IV Omeprazole 40mg</h3>
+        <div class="price">Roll : ₦6800</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="caps omeprazole" data-category="Capsules">
+        <img src="C:\Users\User\Documents/iv omeprazole.jpg">
+        <h3>Omeprazole Capsules 20mg</h3>
+        <div class="price">Box : ₦3000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="oxytocin" data-category="iv/im">
+        <img src="C:\Users\User\Documents//oxy.jpg">
+        <h3>Oxytocin injection 10I.U</h3>
+        <div class="price">Roll : ₦17000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="Prednisolone" data-category="tablets">
+        <img src="C:\Users\User\Documents/Prednisolone.jpg">
+        <h3>Tabs Prednisolone </h3>
+        <div class="price">Box : ₦1300</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="tabs pcm" data-category="tablets">
+        <img src="C:\Users\User\Documents/tabs pcm.jpg">
+        <h3>Tabs Paracetamol 500mg</h3>
+        <div class="price">Vial : ₦7000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="pcm injection" data-category="iv/im">
+        <img src="C:\Users\User\Documents/inj pcm.jpg">
+        <h3>Paracetamol injection 300mg</h3>
+        <div class="price">Roll : ₦7500</div>
+        <button class="buy-btn">Add to Cart</button>
+      </div> 
+      <div class="product" data-name="rabe" data-category="tablets">
+        <img src="C:\Users\User\Documents/rabe.jpg">
+        <h3>Tabs Rabeprazole</h3>
+        <div class="price">Roll : ₦33</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="s gloves" data-category="gloves">
+        <img src="C:\Users\User\Documents/s gloves.jpg">
+        <h3>Surgical Gloves</h3>
+        <div class="price">Carton : ₦83</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="s blades" data-category="all">
+        <img src="C:\Users\User\Documents/s blade.jpg">
+        <h3>Surgical Blades</h3>
+        <div class="price">Box : ₦12300</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+      <div class="product" data-name="2ml" data-category="S/N">
+        <img src="C:\Users\User\Documents/2ml s&n.jpg">
+        <h3>S/N 2ml</h3>
+        <div class="price">Roll : ₦4500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+       <div class="product" data-name="5ml" data-category="S/N">
+        <img src="C:\Users\User\Documents/5ml s&n.jpg">
+        <h3>S/N 5ml</h3>
+        <div class="price">Roll : ₦6000</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+       <div class="product" data-name="10ml" data-category="S/N">
+        <img src="C:\Users\User\Documents/10ml s&n.jpg">
+        <h3>S/N 10ml</h3>
+        <div class="price">Roll : ₦12500</div>
+        <button class="buy-btn">Add to cart</button>
+      </div>
+       <div class="product" data-name="20ml" data-category="S/N">
+        <img src="C:\Users\User\Documents/20ml.jpg">
+        <h3>S/N 20ml</h3>
+        <div class="price">Roll : ₦22500</div>
+        <button class="buy-btn">Add to cart</button> 
+      </div>
+</div>   
+        </section >  
+        <section class="cart" id="cart">
+            <h3 class="Shopping">🛒 Your Shopping Cart</h3>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="Total" id="totalPrice">Total : ₦0</div>
+        </section>  
+        <!--checkout-->
+        <form id="checkoutForm">
+            <h2>Checkout</h2>
+            <label for="name">Name:</label>
+            <input type="name" id="name">
+            <div id="errorName"></div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" >
+            <div id="errorEmail"></div>
+            <label for="phone no">Phone No:</label>
+            <input type="number" id="phone" >
+            <div id="errorPhone"></div>
+            <label for="upload">Upload Reciept:</label>
+            <input type="file" id="reciept">
+            <div id="errorFile"></div>
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" ></textarea>
+            <div id="errorAddress"></div>
+            <select id="state">
+                <option value="">Abia</option>
+                <option value="">Adamawa</option>
+                <option value="">Akwa ibom </option>
+                <option value="">Anambara</option>
+                <option value="">Bauchi</option>
+                <option value="">Bayelsa</option>
+                <option value="">Benue</option>
+                <option value="">Borno</option>
+                <option value="">Cross River</option>
+                <option value="">Delta</option>
+                <option value="">Ibonyi</option>
+                <option value="">Edo</option>
+                <option value="">Ekiti</option>
+                <option value="">Enugu</option>
+                <option value="">Gombe</option>
+                <option value="">Imo</option>
+                <option value="">Jigawa</option>
+                <option value="">Kaduna</option>
+                <option value="">Kano</option>
+                <option value="">Katsina</option>
+                <option value="">Kebbi</option>
+                <option value="">Kogi</option>
+                <option value="">Kwara</option>
+                <option value="">Lagos</option>
+                <option value="">Nassarawa</option>
+                <option value="">Niger</option>
+                <option value="">Ogun</option>
+                <option value="">Osun</option>
+                <option value="">Oyo</option>
+                <option value="">Plateau</option>
+                <option value="">Rivers</option>
+                <option value="">Sokoto</option>
+                <option value="">Taraba</option>
+                <option value="">Yobe</option>
+                <option value="">Zamfara</option>
+            </select>
+            <div id="errorState"></div>
+            <div class="warning">Before place the order, make sure that you’re 18+ years old. And you’re agree with our terms and Privacy</div>
+            <button class="submit" id="submit">Place Order</button>
+            <div id="finalResult"></div>
+        </form>
+        <!--Payment method-->
+        <form id="payment">
+            <h2>Payment Method</h2>
+            <div class="payment-method">Use the account information below <br>to pay your total Price from your cart 
+                <br>with the additional fee for your delivery state.</div>
+                <div class="account-info">Account no: 9016990015 <br>
+                Account name: Musa Muhammad Saidu <br>Bank: Opay</div>
+                <div class="direct">Screenshoots the payment reciept and send it through the Checkout form, so that Pharmacist should confirm the payment.</div>
+                    <div class="payment-warning">Note: You must pay all the total price from your cart including the state delivery fee and send it
+                        to our pharmacy through Checkout form.</div> 
+            </form>
+            <form id="prescription" class="prescription">
+                <h2>Upload Prescription</h2>
+                <div class="prescriber">Upload your doctor’s prescription file in JPG,PNG or PDF formats, so that the pharmacist will review
+                    and send the prescribed drugs to you before 72 Hours.
+                </div>
+                <label for="fullName">Patient's Full Name</label>
+                <input type="text" id="patientName" placeholder="e.g Abubakar Umar Usman">
+                <div id="errorFullName" style="color: red;"></div>
+                <label for="file">Upload File</label>
+                <input type="file" id="file">
+                <div id="errorPrescriptionFile" style="color: red;" accept=".jpg,.jpeg,.png,.pdf"></div>
+                <label for="note">Note to pharmacist</label>
+                <input type="text" id="note" placeholder="optional">
+                <button id="uploadPrescrition" type="submit">Submit</button>
+                <div id="eFp"></div>
+            </form>
+            <section id="about" >
+                <h2 style="color: #292cc0; margin-left: 20px;margin-top: 20px;">About Rahma Patients Medicine Store<h2>
+                    <div class="about-note">We are a licensed phamacy distributing our products in all 36 Nigerian states including FCT.
+                        We provide quality, effective and affordable pharmaceutical products to individual and other health care providers.
+                        Our mission is to allocate an affordability to health care providers and every individual in Nigeria.
+                        We specialized in wide range of medications.
+                        Our vision is to be a leading online pharmacy that provides affordability to our clients.</div>
+                    <div class="about-note1">✅ Licensed pharmacy<br>✅ Affordable pharmaceutical products<br>✅ Expert pharmacists
+                    <br>✅ Mountain stock and quality product<br>✅ Pharmacist consultation available</div>
+                    <div class="about-note2">☎ Phone: +2347036512822 <br>📱 WhatsApp: +2348148985294 <br>📍 HQ: Potiskum road, <br>Opposite Cottage Hospital
+                    Mallam Sidi Gombe Nigeria <br>🚚 Delivery: Nationwide delivery within 72 hours <br>Hours:⌚ Mon–Sunday(8:00Am - 8:00Pm)</div>
+                    </section>
+                    <section id="contact">
+                        <h2 style="color: #292cc0; margin-left: 30px;">Get in touch</h2>
+                        <form id="contactFoam">
+                        <label for="name">Name</label>
+                        <input type="text" id="Cinput">
+                        <div id="errorCinput" style="color: red;"></div>
+                        <label for="email">Email</label>
+                        <input type="email" id="Cemail">
+                        <div id="errorCemail" style="color: red;"></div>
+                        <label for="message">Message</label>
+                        <textarea id="cMessage"></textarea>
+                        <div id="errorCmessage" style="color: red;"></div>
+                        <button type="submit" id="cSubmit" class="SM">Submit</button>
+                        <div id="finalContact" style="color: green;"></div>
+                        </form>
+                    </section>
+                    <footer> 
+                        <div class="brand">Rahma Patient Medicine Store</div>
+                        <div class="Fw">By sending us message you agree with our terms and Privacy</div>
+                        <div class="address">HG: Potiskum road, Opposite Cottage Hospital Mallam Sidi</div>
+                        <div class="tel">Tell: +2348148985294</div>
+                        <div class="copy">© 2025 Rahma patient Medicine store.  Allright reserved.</div>
+                    </footer>
+        <script>
+            //  search filter
+            const searchInput = document.getElementById("search");
+            const categorySel = document.getElementById("cat");
+            const items = document.querySelectorAll(".product");
+            function searchFilter(){
+                const searchText = searchInput.value.toLowerCase();
+                const selectCat = categorySel.value;
+                items.forEach(item => {
+                    const itemText = item.textContent.toLowerCase();
+                    const itemSel = item.getAttribute("data-category");
+
+                    const matchesText = itemText.includes(searchText);
+                    const matchesCat = selectCat === "all" || itemSel === selectCat;
+
+                    item.style.display  = (matchesText && matchesCat) ? "" : "none";
+                });
+            }
+            searchInput.addEventListener("input", searchFilter);
+            categorySel.addEventListener("change", searchFilter);
+
+            // cart system
+            const cartItems = document.getElementById("cartItems");
+            const totalPrice = document.getElementById("totalPrice");
+            let cart = [];
+            document.querySelectorAll(".buy-btn").forEach(button =>{
+                button.addEventListener("click", e =>{
+                    const products = e.target.closest(".product");
+                    const name = products.querySelector("h3").textContent;
+                    const priceText = products.querySelector(".price").textContent;
+                    const price = parseInt(priceText.replace(/[^0-9]/g,"")); 
+                    const existing = cart.find(item => item.name === name);
+                    if(existing){
+                        existing.qty++
+                    }
+                    else{
+                        cart.push({name, price, qty : 1})
+                    };
+                    updateCart();
+                });
+            });
+            function updateCart(){
+                cartItems.innerHTML ="";
+                let total = 0;
+                cart.forEach(item => {
+                    total += item.price * item.qty;
+                    cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name} (×${item.qty})</span>
+                        <span>₦${item.price * item.qty}</span>
+                        </div>` 
+                });
+                totalPrice.textContent = `Total : ₦${total}`;
+            };
+
+            // checkout form
+            const checkoutForm = document.getElementById("checkoutForm");
+            checkoutForm.addEventListener("submit",e=>{
+                e.preventDefault();
+                const errorName = document.getElementById("errorName");
+                const errorEmail = document.getElementById("errorEmail");
+                const errorPhone = document.getElementById("errorPhone");
+                const errorFile = document.getElementById("errorFile");
+                const errorAddress = document.getElementById("errorAddress");
+                const errorState = document.getElementById("errorState");
+                const result = document.getElementById("finalResult");
+                result.textContent = "";
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const reciept = document.getElementById("reciept").value.trim();
+                const address = document.getElementById("address").value.trim();
+                const state = document.getElementById("state").value.trim();
+                
+                if(cart.length === 0){
+                    alert ("🛒 Please add items to your cart");
+                    return;
+                    result.style.color = "red";
+                }
+                if(name.length < 3 || name === ""){
+                    errorName.textContent = "📛 Name must be atleast 3 characters";
+                    return;
+                    errorName.style.color = "red";
+                }
+                if(!email.includes("@") || email === ""){
+                    errorEmail.textContent = "📧 Please enter a valid email";
+                    return;
+                    errorEmail.style.color = "red";
+                }
+                if(phone === "" || phone.length !== 11){
+                    errorPhone.textContent = "📱 Phone no cannot be empty and must be atleast 11 characters";
+                    return;
+                    errorPhone.style.color = "red";
+                }
+                if(reciept === ""){
+                    errorFile.textContent = "🧾 Please upload your reciept";
+                    return;
+                    errorFile.style.color = "red";
+                }
+                if(state ===""){
+                    errorState.textContent = "🚚 Please select a delivery state";
+                    return;
+                    errorFile.style.color = "red";
+                }
+                result.style.color = "green";
+                result.textContent = "Order submitted successfully";
+                checkoutForm.reset();
+            });
+
+            // Prescription
+            const prescription = document.getElementById("prescription");
+            prescription.addEventListener("submit", e=>{
+                e.preventDefault();
+                const fullName = document.getElementById("patientName").value.trim();
+                const file = document.getElementById("file").value.trim();
+                const errorFullName = document.getElementById("errorFullName");
+                const errorPrescriptionFile = document.getElementById("errorPrescriptionFile");
+                const eFp = document.getElementById("eFp");
+
+                errorFullName.textContent = "";
+                errorPrescriptionFile.textContent = "";
+                eFp.textContent = "";
+
+                if(fullName === "" || fullName.length < 6){
+                    errorFullName.textContent = "Please Enter a valid Full name (atleast 6 characters).";
+                    return;
+                }
+                if(file === ""){
+                    errorPrescriptionFile.textContent = "You must upload your prescription file";
+                    return;
+                }
+                const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+                if(!allowedExtensions.exec(file)){
+                    errorPrescriptionFile.textContent  = "file must be in JPG,PNG,or PDF format.";
+                    file.value = "";
+                }   
+                eFp.textContent = "Prescription uploaded successfully ✅";
+                    eFp.style.color = "green";
+                    prescription.reset();
+
+                    setTimeout(() => prescription.reset(), 2000);
+            });
+
+            // Contact form
+            const contact = document.getElementById("contactFoam");
+            contact.addEventListener("submit", e => {
+                e.preventDefault();
+                const Cinput = document.getElementById("Cinput").value.trim();
+                const Cemail = document.getElementById("Cemail").value.trim();
+                const cMessage = document.getElementById("cMessage").value.trim();
+                const errorCinput = document.getElementById("errorCinput");
+                const errorCemail = document.getElementById("errorCemail");
+                const errorCmessage = document.getElementById("errorCmessage");
+                const finalContact = document.getElementById("finalContact");
+
+                errorCinput.textContent = "";
+                errorCemail.textContent = "";
+                errorCmessage.textContent = "";
+                finalContact.textContent = "";
+
+                if(Cinput === "" || /\d/.test(Cinput)||Cinput.length < 3){
+                    errorCinput.textContent = "Please enter a correct name (atleast 3 characters)";
+                    return;
+                }
+                if(Cemail === "" || !Cemail.includes("@")){
+                    errorCemail.textContent = "Please enter a valid email";
+                    return;
+                }
+                if(cMessage === ""){
+                    errorCmessage.textContent = "Please write a message";
+                    return;
+                }
+                finalContact.textContent = "✅ Message submitted successfully!"
+                
+                setTimeout(() => {
+                    finalContact.textContent.textContent = "";
+                },3000);
+                contact.reset();
+            })
+        </script>
+    </body>
+    </html>
